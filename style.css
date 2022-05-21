@@ -29,13 +29,6 @@ body {
   width: 100%;
   background: var(--whitee);
   border-radius: 5px;
-  /* padding: 25px; */
-}
-
-.wrapper header {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #515371;
 }
 
 .wrapper .input-field {
@@ -62,13 +55,6 @@ img.card-img {
 
 h1 {
   color: var(--whitee);
-}
-
-.card-title {
-  color: #b6fbfd;  
-}
-
-h1 {
   font-size: 4rem;
   font-weight: 100;
   position: absolute;
@@ -76,17 +62,13 @@ h1 {
 }
 
 .card-title {
+  color: #b6fbfd;  
   font-size: 1rem;
   font-weight: 200;
   letter-spacing: .2rem;
   padding-left: .8rem;
   position: absolute;
   top: -120%;
-}
-
-.container,
-.card-body {
-  width: 100%;
 }
 
 .input-field input {
@@ -117,6 +99,11 @@ h1 {
 .input-field button.active {
   opacity: 1;
   pointer-events: auto;
+}
+
+ul.todo-list {
+  margin: 0;
+  padding: 0;
 }
 
 .wrapper .todo-list {

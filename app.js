@@ -48,7 +48,8 @@ function showTasks() {
   listArr.forEach((element, index) => {
     newLiTag += `
     <li> ${element} <span onclick="deleteTask(${index})";>
-    <i class="fas fa-trash"></i></span></li>
+    <i class="fas fa-trash"></i></span>
+    </li>
     `;
   });
   todoList.innerHTML = newLiTag; // add new li tag inside ul tag

@@ -1,8 +1,44 @@
 // select all elements
+// const time = document.querySelector(".card-text-container p.time");
 const inputBox = document.querySelector(".input-field input");
 const addBtn = document.querySelector(".input-field button");
 const todoList = document.querySelector(".todo-list");
 const deleteAllBtn = document.querySelector(".footer button");
+
+// Time Format
+function formatTime(val) {
+  if (val < 10) {
+    return "0";
+  } else {
+    return "";
+  }
+}
+
+// Time functionality
+function timeTick () {
+  const dt = new Date ();
+
+  const hr = dt.getHours();
+  const min = dt.getMinutes();
+  const sec = dt.getSeconds();
+
+  // Display time
+  const time = 
+  formatTime(hr) + hr + ":" +
+  formatTime(min) + min + ":" +
+  formatTime(sec) + sec;
+
+  // Show time
+  document.querySelector(".card-text-container p.time").innerHTML = time;
+  // update time per second
+  setInterval(clock, 1000);
+}
+
+timeTick ();
+
+
+
+// Input 
 
 inputBox.onkeyup = () => {
   let userData = inputBox.value; //get user's entered input value

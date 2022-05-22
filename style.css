@@ -6,6 +6,7 @@
   --mid-green-100: #aedada;
   --mid-green-200: #8ccfcf;
   --main-dark-green: #006666;
+  --light-grey-100: #cecece;
   --whitee: #fff;
 }
 
@@ -29,6 +30,7 @@ body {
   width: 100%;
   background: var(--whitee);
   border-radius: 5px;
+  position: relative;
 }
 
 .wrapper .input-field {
@@ -39,42 +41,41 @@ body {
 }
 
 .card-img-overlay {
-  background-color: var(--main-dark-green);
-  opacity: 0.3;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Header image */
-img.card-img {
-  border: none;  
-  object-fit: cover;
+/* Overlay Text */
+.card-text-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
 }
-
-#header-container {
-  position: relative;
-}
+/* end Overlay Text */
 
 h1 {
   color: var(--whitee);
   font-size: 4rem;
   font-weight: 100;
-  position: absolute;
-  bottom: 200%;
+  margin-top: 3rem;
 }
 
-.card-title {
-  color: #b6fbfd;  
+
+p.card-text {
+  color: var(--mid-green-100);  
   font-size: 1rem;
   font-weight: 200;
-  letter-spacing: .2rem;
-  padding-left: .8rem;
-  position: absolute;
-  top: -120%;
+  letter-spacing: .1rem;
+}
+
+#text-divider {
+  font-weight: 100;
 }
 
 .input-field input {
   width: 85%;
   height: 100%;
-  border: 1px solid #ccc;
+  border: 1px solid var(--light-grey-100);
   font-size: 1rem;
   border-radius: 3px;
   padding-left: 1rem;

@@ -5,37 +5,23 @@ const addBtn = document.querySelector(".input-field button");
 const todoList = document.querySelector(".todo-list");
 const deleteAllBtn = document.querySelector(".footer button");
 
-// Time Format
-function formatTime(val) {
-  if (val < 10) {
-    return "0";
-  } else {
-    return "";
-  }
+// Display Date
+function displayDate() {
+  const currentDate = new Date();
+  const fullDate = currentDate.toDateString();
+  document.querySelector("p.date").innerHTML = fullDate;
 }
 
-// Time functionality
-function timeTick () {
-  const dt = new Date ();
+displayDate();
 
-  const hr = dt.getHours();
-  const min = dt.getMinutes();
-  const sec = dt.getSeconds();
-
-  // Display time
-  const time = 
-  formatTime(hr) + hr + ":" +
-  formatTime(min) + min + ":" +
-  formatTime(sec) + sec;
-
-  // Show time
-  document.querySelector(".card-text-container p.time").innerHTML = time;
-  // update time per second
-  setInterval(timeTick, 1000);
+// Display Time
+function displayTime() {
+  const currentTime = new Date();
+  const t = currentTime.toLocaleTimeString();
+  document.querySelector("p.time").innerHTML = t;
 }
 
-timeTick ();
-
+displayTime();
 
 
 // Input 

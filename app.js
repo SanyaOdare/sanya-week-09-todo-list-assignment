@@ -31,7 +31,7 @@ function timeTick () {
   // Show time
   document.querySelector(".card-text-container p.time").innerHTML = time;
   // update time per second
-  setInterval(clock, 1000);
+  setInterval(timeTick, 1000);
 }
 
 timeTick ();

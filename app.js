@@ -1,5 +1,4 @@
 // select all elements
-// const time = document.querySelector(".card-text-container p.time");
 const inputBox = document.querySelector(".input-field input");
 const addBtn = document.querySelector(".input-field button");
 const todoList = document.querySelector(".todo-list");
@@ -17,8 +16,10 @@ displayDate();
 // Display Time
 function displayTime() {
   const currentTime = new Date();
-  const t = currentTime.toLocaleTimeString();
-  document.querySelector("p.time").innerHTML = t;
+  const fullTime = currentTime.toLocaleTimeString();
+  document.querySelector("p.time").innerHTML = fullTime;
+  // update the time every second
+  setInterval(displayTime, 1000);
 }
 
 displayTime();

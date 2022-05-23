@@ -24,7 +24,6 @@ function displayTime() {
 
 displayTime();
 
-
 // Input 
 
 inputBox.onkeyup = () => {
